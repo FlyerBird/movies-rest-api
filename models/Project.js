@@ -9,6 +9,18 @@ const projectSchema = new Schema(
     description: {
       type: String,
       required: true
+    },
+    director: {
+      type: String,
+      required: true
+    },
+    synopsis: {
+      type: String,
+      required: true
+    },
+    image: {
+      type: String,
+      required: true
     }
   },
   {
