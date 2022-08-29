@@ -54,9 +54,9 @@ router.post('/', async (req, res, next) => {
 // @access  Public
 router.put('/:id', async (req, res, next) => {
   const { id } = req.params;
-  const { title, description } = req.body;
+  const { title, image, year, director, synopsis } = req.body;
   try {
-    const updatedProject = await Project.findByIdAndUpdate(id, { title, description }, { new: true });
+    const updatedProject = await Project.findByIdAndUpdate(id, { title, image, year, director, synopsis }, { new: true });
     res.status(202).json({ data: updatedProject })
   } catch (error) {
     next(error);
